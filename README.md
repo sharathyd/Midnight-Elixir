@@ -2,7 +2,7 @@
 
 **Midnight Elixir** is a premium cocktail restaurant & bar web experience, designed and built using the cutting-edge philosophy of **Vibe Coding**. This project showcases a high-end interactive portal that blends sophisticated aesthetics with modern web technologies.
 
-[![Midnight Elixir Preview](https://lh3.googleusercontent.com/aida/AOfcidUON4R_yWI367HD4PCfrDZxNeRZDdAS8db8Re_f4CZdBnLM5txlf67Vt5lB61beJXAFrVqYqXKseRCJtkZfZyjFc9tAH6Eccf17OIIJ32o67W4DOOVhGTR_Rp6ngDkxVm7LqqJfJ3M63fPJgUde0gIWGj-P7xML3cuAt9-zBDlHzwzGGKt-C2v844igdHsnIghl8Ex0eXhKZiW_I2r6i3z1Kprb_Mqf-wF42ZQR_blJuCPUYsdJ9nQycJJT)](https://sharathyd.github.com/Midnight-Elixir)
+![Midnight Elixir Preview](hero.png)
 
 ## ✨ Features
 
