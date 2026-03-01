@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221e10",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Noto Sans", sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-display {
+            font-family: "Noto Serif", serif;
+        }
+    </style>
+<link rel=\icon\ type=\image/png\ href=\favicon.png\></head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <div
+        class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Navigation -->
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 px-6 lg:px-40 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+                <div class="flex items-center gap-4">
+                    <div class="size-8 text-primary">
+                        <span class="material-symbols-outlined text-4xl">local_bar</span>
+                    </div>
+                    <h2
+                        class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight font-display">
+                        Midnight Elixir</h2>
+                </div>
+                <div class="flex flex-1 justify-end gap-4 lg:gap-8 items-center">
+                    <nav class="hidden md:flex gap-6">
+                        <a class="text-sm font-bold hover:text-primary transition-colors" href="home.html">Home</a>
+                        <a class="text-sm font-bold text-primary border-b-2 border-primary pb-1"
+                            href="menu.html">Menu</a>
+                        <a class="text-sm font-bold hover:text-primary transition-colors"
+                            href="reservations.html">Reservations</a>
+                    </nav>
+                    <label class="flex flex-col min-w-40 h-10 max-w-64 hidden sm:block">
+                        <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                            <div
+                                class="text-primary/70 flex border-none bg-primary/10 items-center justify-center pl-4 rounded-l-lg border-r-0">
+                                <span class="material-symbols-outlined text-xl">search</span>
+                            </div>
+                            <input
+                                class="form-input flex w-full min-w-0 flex-1 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-0 border-none bg-primary/10 h-full placeholder:text-primary/50 px-4 rounded-l-none pl-2 text-base font-normal"
+                                placeholder="Search menu..." value="" />
+                        </div>
+                    </label>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex cursor-pointer items-center justify-center rounded-lg h-10 bg-primary/10 text-primary hover:bg-primary/20 transition-colors px-3">
+                            <span class="material-symbols-outlined">shopping_cart</span>
+                        </button>
+                        <button
+                            class="flex cursor-pointer items-center justify-center rounded-lg h-10 bg-primary/10 text-primary hover:bg-primary/20 transition-colors px-3">
+                            <span class="material-symbols-outlined">account_circle</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main class="flex flex-1 flex-col">
+                <!-- Hero Section -->
+                <div class="relative w-full h-[350px] overflow-hidden">
+                    <div class="absolute inset-0 bg-cover bg-center"
+                        data-alt="A moody atmospheric shot of a luxury cocktail bar counter"
+                        style='background-image: linear-gradient(0deg, rgba(34, 30, 16, 0.9) 0%, rgba(34, 30, 16, 0.2) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-L7XhdQnGJAn0vZyVs0yZgc9baq-TOSSo1Ea8rChYi8K6Bas2kl_wzov285KK549wUU6MEgtxg2EeLph-jlBF9nB8v_baGczkLS8hr8ZHNFDd3v6K-QRa99uVmxJ8z9wMUcwsTDC9mbe2CzsL0kAuc89l7zvmhDCZv_5gN7bI_4T-SfyA2NnETFKtH23eWKwjww_ylDE5AUgZvfJ6Q2m6QxahlD-QjFSIh2lFTeTlQZx5mAZi8DOmDrYSOaZotOhE0fT30JaoMBfF");'>
+                    </div>
+                    <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
+                        <h1 class="text-primary text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">The Art of Mixology
+                        </h1>
+                        <p class="text-slate-100 text-lg md:text-xl max-w-2xl font-light">Crafted spirits, seasonal
+                            ingredients, and a touch of alchemy.</p>
+                    </div>
+                </div>
+                <!-- Menu Tabs -->
+                <div
+                    class="sticky top-[73px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur border-b border-primary/20">
+                    <div class="max-w-[960px] mx-auto flex justify-center gap-4 md:gap-12 px-4">
+                        <a class="flex flex-col items-center py-4 border-b-2 border-primary text-primary transition-all"
+                            href="#signature">
+                            <span class="text-sm font-bold uppercase tracking-widest">Signature</span>
+                        </a>
+                        <a class="flex flex-col items-center py-4 border-b-2 border-transparent text-slate-500 hover:text-primary transition-all"
+                            href="#classics">
+                            <span class="text-sm font-bold uppercase tracking-widest">Classics</span>
+                        </a>
+                        <a class="flex flex-col items-center py-4 border-b-2 border-transparent text-slate-500 hover:text-primary transition-all"
+                            href="#non-alcoholic">
+                            <span class="text-sm font-bold uppercase tracking-widest">Zero Proof</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Menu Content -->
+                <div class="max-w-[1200px] mx-auto w-full py-12 px-6">
+                    <!-- Signature Cocktails Section -->
+                    <section class="mb-20" id="signature">
+                        <div class="flex items-center gap-4 mb-10">
+                            <h2 class="text-primary text-3xl font-bold font-display">Signature Cocktails</h2>
+                            <div class="flex-1 h-[1px] bg-primary/20"></div>
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12">
+                            <!-- Menu Item 1 -->
+                            <div class="flex gap-6 group">
+                                <div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden border border-primary/20">
+                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        data-alt="A vibrant yellow citrus cocktail in a crystal glass"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdnOPpTQL93mlpS75vIThOQ6wjbfXkcRksua73ByMRO2iL25nc9kqbGpbeAKJoMLkfsRMhUkFXowzkiDjMppkBUy9gaG1dzvaJc4na6kDVjXnbCs7q3TaQWTtumWvIn5jeqU38CZJiUhQXEWOCQRYyhDGuI4eSt15BqLsQF4Rp4DYNApu2GO0v-LxnUdUbV32_K68hCxXLJPoSH61vM96PTQC4Eo6c_Vd2TItpWrxWp7FJjIHh-WcfE3UJM50tnh4Q_7KT1JfNoNIe" />
+                                </div>
+                                <div class="flex-1">
+                                    <div
+                                        class="flex justify-between items-baseline border-b border-primary/10 pb-1 mb-2">
+                                        <h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100">
+                                            Saffron Sunset</h3>
+                                        <span class="text-primary font-bold">$20</span>
+                                    </div>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Artisanal gin
+                                        infused with Kashmiri saffron, fresh orange marmalade, thyme syrup, and a splash
+                                        of sparkling nectar.</p>
+                                </div>
+                            </div>
+                            <!-- Menu Item 2 -->
+                            <div class="flex gap-6 group">
+                                <div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden border border-primary/20">
+                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        data-alt="A deep red berry cocktail with a garnish"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqJc2IWqHY2ttWRcsZLVCH2CSs0Rt5c0pawfbhlJ1AiyOe9r-0K0mBk8LuW7IGsd7Ow27xuOC-iDUpP6JosXlHooo2soTTWEZY97Ihf4ZrdgtQCIaG2eWeV4PW-VjA9m8o18N5GrL56r0AK0F2zGfn_Y_fGhdzaofGw0o-pnBC56nCyZbKeWy-xpjZtRz911qrq9Neb05K2PyU1rGHy0IYFhWlctOn23WRqju0DBdPpArx5iAPiiGMWx5q0hNwOUaNnkhruz-1K_0q" />
+                                </div>
+                                <div class="flex-1">
+                                    <div
+                                        class="flex justify-between items-baseline border-b border-primary/10 pb-1 mb-2">
+                                        <h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100">
+                                            The Midnight Rose</h3>
+                                        <span class="text-primary font-bold">$22</span>
+                                    </div>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                        Blackberry-infused vodka, wild rose petal syrup, lemon juice, and a rim of
+                                        activated charcoal sugar.</p>
+                                </div>
+                            </div>
+                            <!-- Menu Item 3 -->
+                            <div class="flex gap-6 group">
+                                <div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden border border-primary/20">
+                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        data-alt="A smoky brown cocktail with an orange peel"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbha9ZbZVp80mYQ2Wq__vkOaxMi_NmLEX2Jt9CX0f-yrrrl9ZaGYuHjaHkdPBVPTZ0xmIPm93fyAm_jVoq1fSh_LURwf2tjtQs6uP03emSA8E2Bp9LnCy6RvCxA_y48Yku8igCW9gGmReYGgS9fGz2WrQIzxyFTRMicnpG8aMV2n9Mve0VuyWc8oGGAaM77WKMrb38nU5swqHsfcBkfGxiPZYw0309n_jh5YEsCXgxyiuQMsCLBjiKwLQa7_leXUSmgsUfeNI3Fr0f" />
+                                </div>
+                                <div class="flex-1">
+                                    <div
+                                        class="flex justify-between items-baseline border-b border-primary/10 pb-1 mb-2">
+                                        <h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100">
+                                            Smoked Cardamom Old Fashioned</h3>
+                                        <span class="text-primary font-bold">$26</span>
+                                    </div>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Bourbon aged
+                                        in-house, toasted cardamom bitters, jaggery syrup, smoked with applewood chips
+                                        at your table.</p>
+                                </div>
+                            </div>
+                            <!-- Menu Item 4 -->
+                            <div class="flex gap-6 group">
+                                <div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden border border-primary/20">
+                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        data-alt="A pale green cocktail with cucumber slices"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPHiJZ2NpBqpCXyvvY7jxrnxiT3ewgGEbQTDlgv2z9ZgrfDBqNRUfSAqZdPtEqW364LNd2Y6lgHZiO6lyhmmWd97hZ3SRsE27ORWfWTdldF79EtK2vzUWyyuR2tpd6QFZ-zDbgD1HPQZchRnD0hdMTYk2bvj9UTwsjXQBt0NdI4R-ltXrs-GCtao8u1XEJ6xfPv7E_aF5rbKi4Vbh5FRyhgfqFfRNuiwnvG-1JVm64LH03u3_6Ea2aLEWG6DQ0BuG5J3QL5vV0cMeS" />
+                                </div>
+                                <div class="flex-1">
+                                    <div
+                                        class="flex justify-between items-baseline border-b border-primary/10 pb-1 mb-2">
+                                        <h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100">
+                                            Kerala Garden</h3>
+                                        <span class="text-primary font-bold">$18</span>
+                                    </div>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">White rum,
+                                        muddled curry leaves, fresh green chili, coconut water, and a lime squeeze.
+                                        Spicy and refreshing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Featured Promo Image -->
+                    <div class="w-full h-64 rounded-xl overflow-hidden mb-20 relative">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="Close up of a bartender pouring a drink through a strainer"
+                            style='background-image: linear-gradient(90deg, rgba(34, 30, 16, 1) 0%, rgba(34, 30, 16, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlVu9YXc8MvB5MUPImhjKKq4eXCDiEMvsgLAZ3VT1m_RwZsDSBNRIEiOblLXJM5aF7jL4eziQHlyEX__MPM_7Yq5rp6IT5GhmwzUY0g0oXkBqYnmiHqChRmXCvnidOjW-2PLFOGG3AaEaeV8vX_wly3-HuKdqTguQ9mgXhzTKxcsc4uIQnvpdboDyEQbzoUxij6tfUeqJgXGxNXSkj7FAHIOfcRMTwaTKCeVHyawNglwdo9cADLt-F6wetNkfs_7KqywJwlQCTqLR0");'>
+                        </div>
+                        <div class="relative h-full flex flex-col justify-center px-12 max-w-xl">
+                            <span class="text-primary text-sm font-bold tracking-tighter uppercase mb-2">Bartender's
+                                Choice</span>
+                            <h3 class="text-white text-2xl font-bold font-display mb-4">The Vintage Collection</h3>
+                            <p class="text-slate-200 text-sm mb-6">Ask our mixologist for the monthly rotation of
+                                barrel-aged spirits and rare vintage finds.</p>
+                            <button
+                                class="w-fit bg-primary text-background-dark font-bold py-2 px-6 rounded-lg text-sm uppercase tracking-wider hover:bg-white transition-colors">Learn
+                                More</button>
+                        </div>
+                    </div>
+                    <!-- Classic Cocktails Section -->
+                    <section class="mb-20" id="classics">
+                        <div class="flex items-center gap-4 mb-10">
+                            <div class="flex-1 h-[1px] bg-primary/20"></div>
+                            <h2 class="text-primary text-3xl font-bold font-display">Classic Cocktails</h2>
+                            <div class="flex-1 h-[1px] bg-primary/20"></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div
+                                class="p-6 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/40 transition-all flex flex-col text-center items-center">
+                                <span class="material-symbols-outlined text-primary text-4xl mb-4">wine_bar</span>
+                                <h3 class="text-xl font-bold font-display mb-2">Negroni</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Gin, Campari, Sweet Vermouth,
+                                    Orange Twist</p>
+                                <span class="text-primary font-bold mt-auto">$18</span>
+                            </div>
+                            <div
+                                class="p-6 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/40 transition-all flex flex-col text-center items-center">
+                                <span class="material-symbols-outlined text-primary text-4xl mb-4">liquor</span>
+                                <h3 class="text-xl font-bold font-display mb-2">Whiskey Sour</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Bourbon, Fresh Lemon, Sugar,
+                                    Egg White, Angostura</p>
+                                <span class="text-primary font-bold mt-auto">$19</span>
+                            </div>
+                            <div
+                                class="p-6 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/40 transition-all flex flex-col text-center items-center">
+                                <span class="material-symbols-outlined text-primary text-4xl mb-4">local_bar</span>
+                                <h3 class="text-xl font-bold font-display mb-2">Dry Martini</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Premium Gin or Vodka, Dry
+                                    Vermouth, Olives or Twist</p>
+                                <span class="text-primary font-bold mt-auto">$20</span>
+                            </div>
+                            <div
+                                class="p-6 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/40 transition-all flex flex-col text-center items-center">
+                                <span class="material-symbols-outlined text-primary text-4xl mb-4">glass_cup</span>
+                                <h3 class="text-xl font-bold font-display mb-2">Espresso Martini</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Vodka, Coffee Liqueur, Fresh
+                                    Espresso, Vanilla</p>
+                                <span class="text-primary font-bold mt-auto">$21</span>
+                            </div>
+                            <div
+                                class="p-6 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/40 transition-all flex flex-col text-center items-center">
+                                <span class="material-symbols-outlined text-primary text-4xl mb-4">brush</span>
+                                <h3 class="text-xl font-bold font-display mb-2">Mojito</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">White Rum, Fresh Mint, Lime,
+                                    Sugar, Soda Water</p>
+                                <span class="text-primary font-bold mt-auto">$16</span>
+                            </div>
+                            <div
+                                class="p-6 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/40 transition-all flex flex-col text-center items-center">
+                                <span class="material-symbols-outlined text-primary text-4xl mb-4">celebration</span>
+                                <h3 class="text-xl font-bold font-display mb-2">French 75</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Gin, Lemon Juice, Sugar,
+                                    Topped with Champagne</p>
+                                <span class="text-primary font-bold mt-auto">$28</span>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Non-Alcoholic Section -->
+                    <section class="mb-20" id="non-alcoholic">
+                        <div class="flex items-center gap-4 mb-10">
+                            <h2 class="text-primary text-3xl font-bold font-display">Zero Proof Beverages</h2>
+                            <div class="flex-1 h-[1px] bg-primary/20"></div>
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                            <div class="flex flex-col gap-8">
+                                <div class="flex justify-between group">
+                                    <div class="flex-1">
+                                        <h3
+                                            class="text-lg font-bold font-display text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                                            Hibiscus Sparkler
+                                            <span class="material-symbols-outlined text-xs text-primary/50">eco</span>
+                                        </h3>
+                                        <p class="text-slate-500 text-sm italic">Cold brew hibiscus tea, ginger ale,
+                                            mint bouquet</p>
+                                    </div>
+                                    <span class="text-primary font-bold ml-4">$10</span>
+                                </div>
+                                <div class="flex justify-between group">
+                                    <div class="flex-1">
+                                        <h3
+                                            class="text-lg font-bold font-display text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                                            The Botanist
+                                        </h3>
+                                        <p class="text-slate-500 text-sm italic">Seedlip Garden 108, tonic, elderflower,
+                                            cucumber</p>
+                                    </div>
+                                    <span class="text-primary font-bold ml-4">$12</span>
+                                </div>
+                                <div class="flex justify-between group">
+                                    <div class="flex-1">
+                                        <h3
+                                            class="text-lg font-bold font-display text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                                            Passion Fruit Mule
+                                        </h3>
+                                        <p class="text-slate-500 text-sm italic">Passion fruit puree, lime juice, spicy
+                                            ginger beer</p>
+                                    </div>
+                                    <span class="text-primary font-bold ml-4">$10</span>
+                                </div>
+                            </div>
+                            <div class="rounded-xl overflow-hidden shadow-2xl">
+                                <img class="w-full h-full object-cover max-h-64"
+                                    data-alt="Refreshing tall glass mocktail with fruit garnishes"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCydVf6focZViIR82jPAG8OFQ19sIy_UyPdyTYKrnTeCHcMOeb-pw4y2zEqMFV3ljqOYtxgyDHSdMboaLErGGhkRpS_jIdbasGxFcZQqdAw3IUa2Tuew1Bp5x4tpdTESCxEm4fr6rZ_aTNdZOEbmP250jQclIIObzHd5nO_ijFLWASfyDKIH46XgurmCteLBzhy8fxtEYyWJCFjvkc9JnU7L_i6CZw5HFNkDgb7_EPXKbV5BZZuTYJvl6GShxHUCaKfv9_01PK4mVg4" />
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Footer Section -->
+                <footer class="bg-primary/5 border-t border-primary/20 py-12 px-6">
+                    <div class="max-w-[960px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+                        <div>
+                            <h4 class="text-primary font-bold font-display mb-4">Midnight Elixir</h4>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                A curated experience for the discerning palate. We believe every drink tells a story.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-primary font-bold font-display mb-4">Visit Us</h4>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm">
+                                4th Floor, Sky Deck<br />
+                                Cyber Hub, Gurgaon<br />
+                                Haryana 122002
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-primary font-bold font-display mb-4">Hours</h4>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm">
+                                Mon - Thu: 5 PM - 12 AM<br />
+                                Fri - Sun: 4 PM - 2 AM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-12 text-center border-t border-primary/10 pt-8">
+                        <p class="text-slate-500 dark:text-slate-400 text-xs">© 2024 Midnight Elixir. Please drink
+                            responsibly.</p>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

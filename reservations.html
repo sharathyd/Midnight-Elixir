@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221e10",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(34, 30, 16, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(244, 192, 37, 0.2);
+        }
+    </style>
+    <link rel=\icon\ type=\image/png\ href=\favicon.png\>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100 overflow-x-hidden">
+    <div class="relative min-h-screen flex flex-col">
+        <div class="fixed inset-0 z-0">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                data-alt="Luxurious dimly lit cocktail bar with golden accents"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAza7rzuxblCFPaTa2uw9L5qgUaWuSx96VNE3NPvwce3ga4_cQ7uLHuTYXj8TPHPyHqzJ7O8S_Nld94UzpPXvkIMfJKkwg_WHFt5fGT7mn4pJ7iN5nzX2YlaPs1IsAZvlHxiZEJy73HXsDUVoDk5Lm61dqlleNdh5PINqhzjw3CKvDFs4I8wo6ySvRWQzx15iYFZDXyBswWNNKEjRan75B9xNPvcKUZWlOW4W_1QRYha-iCQcRy5v1SNeV7lIy0fKiMyd0ooF7DtB3K');">
+            </div>
+        </div>
+        <header
+            class="relative z-20 flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 px-6 py-4 lg:px-20 bg-background-dark/80 backdrop-blur-md">
+            <div class="flex items-center gap-4 text-primary">
+                <div class="size-8">
+                    <span class="material-symbols-outlined text-4xl">local_bar</span>
+                </div>
+                <h2 class="text-slate-100 text-xl font-display font-bold leading-tight tracking-tight">Midnight Elixir
+                </h2>
+            </div>
+            <nav class="hidden md:flex flex-1 justify-center gap-8 text-slate-100 font-medium">
+                <a class="hover:text-primary transition-colors" href="home.html">Home</a>
+                <a class="text-primary border-b-2 border-primary" href="reservations.html">Reservations</a>
+                <a class="hover:text-primary transition-colors" href="menu.html">Menu</a>
+                <a class="hover:text-primary transition-colors" href="#">Private Events</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 transition-all">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-primary/50"
+                    data-alt="User profile avatar small round image"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9P0DZIy4unq1J9eC_s3D0rNGjOhJjFW3bCr244ckwyOuJnzHEoJNkvLomoo7ul4ovHEv-X2G15upOME8reVqoDmJMnMSzjSIiB2b8TaSDbqwu6LxV5v24wusXMppHobFr4-AORcmA9J7bElHkI4xQ6SVchHAvSSYqwYgzeSp5gO5MHyrp6nI4cNlfz-wpTnJ4FYCZ7eakvRDBEc3HQxGfK6qF-QxQM2DbQDwq5V_5oJAjSVY2rQ0V2Z9XRelrIMwNc973kMRkbcrl');">
+                </div>
+            </div>
+        </header>
+        <main class="relative z-10 flex-1 flex items-center justify-center p-6 lg:p-6">
+            <div class="max-w-4xl w-full">
+                <div class="glass-panel rounded-xl p-8 shadow-2xl lg:p-8">
+                    <div class="text-center mb-6">
+                        <h1 class="font-display text-4xl font-bold text-primary mb-4 lg:text-4xl">Secure Your Table</h1>
+                        <p class="text-slate-300 text-lg">Experience the art of mixology in an atmosphere of refined
+                            elegance.</p>
+                    </div>
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-primary text-sm font-bold uppercase tracking-widest">Date</label>
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60">calendar_today</span>
+                                <input
+                                    class="w-full bg-background-dark/50 border border-primary/30 rounded-lg py-3 pl-12 pr-4 text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                    type="date" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-primary text-sm font-bold uppercase tracking-widest">Time</label>
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60">schedule</span>
+                                <select
+                                    class="w-full bg-background-dark/50 border border-primary/30 rounded-lg py-3 pl-12 pr-4 text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none appearance-none transition-all">
+                                    <option>06:00 PM</option>
+                                    <option>07:00 PM</option>
+                                    <option>08:00 PM</option>
+                                    <option>09:00 PM</option>
+                                    <option>10:00 PM</option>
+                                    <option>11:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-primary text-sm font-bold uppercase tracking-widest">Number of
+                                Guests</label>
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60">group</span>
+                                <select
+                                    class="w-full bg-background-dark/50 border border-primary/30 rounded-lg py-3 pl-12 pr-4 text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none appearance-none transition-all">
+                                    <option>2 Guests</option>
+                                    <option>3 Guests</option>
+                                    <option>4 Guests</option>
+                                    <option>5 Guests</option>
+                                    <option>6+ Guests</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-primary text-sm font-bold uppercase tracking-widest">Full Name</label>
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60">person</span>
+                                <input
+                                    class="w-full bg-background-dark/50 border border-primary/30 rounded-lg py-3 pl-12 pr-4 text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-slate-500"
+                                    placeholder="John Doe" type="text" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2 md:col-span-2">
+                            <label class="text-primary text-sm font-bold uppercase tracking-widest">Contact Info (Email
+                                or Phone)</label>
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60">mail</span>
+                                <input
+                                    class="w-full bg-background-dark/50 border border-primary/30 rounded-lg py-3 pl-12 pr-4 text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-slate-500"
+                                    placeholder="john@example.com" type="text" />
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <button
+                                class="w-full bg-primary hover:bg-primary/90 text-background-dark font-display font-bold text-xl py-4 rounded-lg transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2"
+                                type="submit">
+                                <span class="material-symbols-outlined">check_circle</span>
+                                Confirm Booking
+                            </button>
+                        </div>
+                    </form>
+                    <p class="text-center text-slate-400 text-sm italic mt-4">
+                        By confirming, you agree to our booking policy. A 15-minute grace period applies to all
+                        reservations.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <footer class="relative z-10 bg-background-dark/90 border-t border-primary/20 py-8 px-6 lg:px-20">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2 text-primary/60">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <p class="text-sm font-display">123 Golden Avenue, Velvet District, NY</p>
+                </div>
+                <div class="flex gap-6">
+                    <a class="text-primary/60 hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined">account_circle</span>
+                    </a>
+                    <a class="text-primary/60 hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined">contact_support</span>
+                    </a>
+                    <a class="text-primary/60 hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined">share</span>
+                    </a>
+                </div>
+                <p class="text-primary/40 text-xs">© 2024 Midnight Elixir. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

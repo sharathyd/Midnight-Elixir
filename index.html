@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Elixir | Prototype</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-color: #f4c025;
+            --accent-hover: #ffd54f;
+            --border-radius: 8px;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Noto Serif', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            padding: 4rem 1rem 3rem;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(244, 192, 37, 0.08) 0%, rgba(18,18,18,0) 70%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        h1 {
+            color: var(--accent-color);
+            font-size: 3rem;
+            margin: 0 0 1rem 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin: 0;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding: 4rem 2rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255,255,255,0.03);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(244, 192, 37, 0.5);
+            border-color: transparent;
+        }
+
+        .card-image-wrapper {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+            background-color: #000;
+        }
+
+        .card-image-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, var(--surface-color) 0%, transparent 60%);
+            opacity: 0.9;
+            transition: opacity 0.4s ease;
+        }
+
+        .card:hover .card-image-wrapper::after {
+            opacity: 0.3;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .card:hover img {
+            transform: scale(1.08);
+        }
+
+        .card-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 0 0 0.75rem 0;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .card:hover .card-title {
+            color: var(--accent-hover);
+        }
+
+        .card-desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0 0 2rem 0;
+            flex-grow: 1;
+        }
+
+        .card-action {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: auto;
+        }
+
+        .card-action svg {
+            width: 20px;
+            height: 20px;
+            margin-left: 8px;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .card:hover .card-action svg {
+            transform: translateX(6px);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 2rem;
+            color: rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+            font-family: sans-serif;
+            text-align: center;
+        }
+    </style>
+<link rel=" icon\ type=\image/png\ href=\favicon.png\></head>
+<body>
+
+    <header>
+        <h1>Midnight Elixir</h1>
+        <p>Interactive Bar & Restaurant Prototype. Select a screen to explore the design and flow.</p>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+            
+            <!-- Home Screen -->
+            <a href="home.html" class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://lh3.googleusercontent.com/aida/AOfcidUON4R_yWI367HD4PCfrDZxNeRZDdAS8db8Re_f4CZdBnLM5txlf67Vt5lB61beJXAFrVqYqXKseRCJtkZfZyjFc9tAH6Eccf17OIIJ32o67W4DOOVhGTR_Rp6ngDkxVm7LqqJfJ3M63fPJgUde0gIWGj-P7xML3cuAt9-zBDlHzwzGGKt-C2v844igdHsnIghl8Ex0eXhKZiW_I2r6i3z1Kprb_Mqf-wF42ZQR_blJuCPUYsdJ9nQycJJT" alt="Home Screen Thumbnail">
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">Home Portal</h2>
+                    <p class="card-desc">The main entry point for guests. Features featured cocktails, ambiance showcase, and quick links.</p>
+                    <div class="card-action">
+                        View Screen
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Menu Screen -->
+            <a href="menu.html" class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://lh3.googleusercontent.com/aida/AOfcidXmoat2QcIUTp-_adjbdh90BHA9kG3AYXegqSkW2Oe7fbm4Y8zRYfNpLECHmJLC62RE2neQMwGdacC_bafFUNOBFILo7FYGWE2ydB1xCRRU6iDCT3faDzj5_EiWVJeqvWgLTn5ndtx2XHoR-Nj5WP6R_ipKg0uo1xUwUeUJ4TWE6kiUtxHSh_5n7hy_v_sukkR-Wfbnc7KxEkUZ5_RHjAIm4-u3_vD4-l5D7kO7OIRKvecjviaXDfotPuE3" alt="Menu Screen Thumbnail">
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">Drinks & Menu</h2>
+                    <p class="card-desc">Detailed listing of signature cocktails, classic mixers, and small plates with pricing and descriptions.</p>
+                    <div class="card-action">
+                        View Screen
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Reservations Screen -->
+            <a href="reservations.html" class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://lh3.googleusercontent.com/aida/AOfcidX-eQm5-zgm_wCDL95U95wR24R0CledU8eSAFFSPLDdRKht9FQJVVYjtYH0etvN2F0MBhE-Lf7sY3cZXP-SZtJE1Ku9zucNVmTJVrf6rcpRZ4LWDbHGaD08rDO0cY7RwS75Lb0uHC-NiacUBu0PcqDjFcEl2tkkvBDP_Rs0xGEpkwOLpjuln6ZkCUpMfKvaYminlL04zFUZ-j3o87ubCk9dwj4LVTqsInagX5FLWC3F_sJ4njQ8UDBB4Ai8" alt="Reservations Screen Thumbnail">
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">Book a Table</h2>
+                    <p class="card-desc">Interactive booking interface allowing users to select party size, date, and preferred time slots.</p>
+                    <div class="card-action">
+                        View Screen
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Midnight Elixir. Generated Concept UI.
+    </footer>
+
+</body>
+</html>
